@@ -27,7 +27,9 @@ class Checkbox extends Component with ValueChangeEventSource<bool>, MixinDisable
   bool get value => checkBoxInput.checked ?? false;
 
   set value(bool value) {
-    checkBoxInput.checked = value;
+    checkBoxInput
+      ..indeterminate = false
+      ..checked = value;
   }
 
   @override
@@ -39,6 +41,10 @@ class Checkbox extends Component with ValueChangeEventSource<bool>, MixinDisable
   set caption(String caption) => _label.text = caption;
 
   String get caption => _label.text ?? '';
+
+  bool get isIndeterminate => checkBoxInput.indeterminate ?? false;
+
+  set isIndeterminate(bool value) => checkBoxInput.indeterminate = value;
 
   void focus() {
     checkBoxInput.focus();
