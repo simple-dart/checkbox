@@ -1,6 +1,6 @@
 name: simple_dart_checkbox
 description: Simple Checkbox Component
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/simple-dart/checkbox
 platforms:
   web:
@@ -10,4 +10,4 @@ environment:
 
 
 dependencies:
-  simple_dart_ui_core: ^0.0.2
+  simple_dart_ui_core: ^0.0.3

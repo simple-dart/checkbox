@@ -11,6 +11,9 @@ class Checkbox extends Component with ValueChangeEventSource<bool>, MixinDisable
     checkBoxInput.onChange.listen((event) {
       fireValueChange(!value, value);
     });
+    _label.onClick.listen((event) {
+      checkBoxInput.click();
+    });
 
     element.children.add(checkBoxInput);
     element.children.add(_label);
